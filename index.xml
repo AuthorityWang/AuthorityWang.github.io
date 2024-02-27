@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Penghao Wang</title>
+    <title>Penghao Wang - ShanghaiTech University</title>
     <link>https://example.com/</link>
       <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
-    <description>Penghao Wang</description>
+    <description>Penghao Wang - ShanghaiTech University</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://example.com/media/icon_hu167682d41ba7f21c7d4e60d27f94c4b7_394480_512x512_fill_lanczos_center_3.png</url>
-      <title>Penghao Wang</title>
+      <title>Penghao Wang - ShanghaiTech University</title>
       <link>https://example.com/</link>
     </image>
     
@@ -317,7 +317,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-763492158&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-921856734&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -327,7 +327,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-763492158&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-921856734&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
