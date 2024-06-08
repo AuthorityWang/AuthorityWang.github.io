@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications | Penghao Wang - ShanghaiTech University</title>
-    <link>https://example.com/publication/</link>
-      <atom:link href="https://example.com/publication/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://authoritywang.github.io/publication/</link>
+      <atom:link href="https://authoritywang.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu167682d41ba7f21c7d4e60d27f94c4b7_394480_512x512_fill_lanczos_center_3.png</url>
+      <url>https://authoritywang.github.io/media/icon_hu167682d41ba7f21c7d4e60d27f94c4b7_394480_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
-      <link>https://example.com/publication/</link>
+      <link>https://authoritywang.github.io/publication/</link>
     </image>
     
     <item>
       <title>HiFi4G: High-Fidelity Human Performance Rendering via Compact Gaussian Splatting</title>
-      <link>https://example.com/publication/hifi4g/</link>
+      <link>https://authoritywang.github.io/publication/hifi4g/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/hifi4g/</guid>
+      <guid>https://authoritywang.github.io/publication/hifi4g/</guid>
       <description>&lt;!-- 
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -41,9 +41,9 @@ Add the publication&#39;s **full text** or **supplementary notes** here. You can
     
     <item>
       <title>NEPHELE: A Neural Platform for Highly Realistic Cloud Radiance Rendering</title>
-      <link>https://example.com/publication/nephele/</link>
+      <link>https://authoritywang.github.io/publication/nephele/</link>
       <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/nephele/</guid>
+      <guid>https://authoritywang.github.io/publication/nephele/</guid>
       <description>&lt;!-- 
 
 &lt;div class=&#34;alert alert-note&#34;&gt;

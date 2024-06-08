@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Demo | Penghao Wang - ShanghaiTech University</title>
-    <link>https://example.com/tag/demo/</link>
-      <atom:link href="https://example.com/tag/demo/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://authoritywang.github.io/tag/demo/</link>
+      <atom:link href="https://authoritywang.github.io/tag/demo/index.xml" rel="self" type="application/rss+xml" />
     <description>Demo</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu167682d41ba7f21c7d4e60d27f94c4b7_394480_512x512_fill_lanczos_center_3.png</url>
+      <url>https://authoritywang.github.io/media/icon_hu167682d41ba7f21c7d4e60d27f94c4b7_394480_512x512_fill_lanczos_center_3.png</url>
       <title>Demo</title>
-      <link>https://example.com/tag/demo/</link>
+      <link>https://authoritywang.github.io/tag/demo/</link>
     </image>
     
     <item>
       <title>External Project</title>
-      <link>https://example.com/project/external-project/</link>
+      <link>https://authoritywang.github.io/project/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/external-project/</guid>
+      <guid>https://authoritywang.github.io/project/external-project/</guid>
       <description></description>
     </item>
     
