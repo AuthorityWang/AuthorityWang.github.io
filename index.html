@@ -73,10 +73,49 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
+              <tr onmouseout="v3_stop()" onmouseover="v3_start()"></tr>
+                <td style="padding:20px;width:25%;vertical-align:middle;">
+                  <div class="one">
+                    <img src='data/publications/v3/v3_teaser.jpg'
+                      style="padding:20px;width:100%;vertical-align:middle;text-align:center">
+                  </div>
+                  <script type="text/javascript">
+                    function v3_start() {
+                      document.getElementById('v3_image').style.opacity = "1";
+                    }
+
+                    function v3_stop() {
+                      document.getElementById('v3_image').style.opacity = "0";
+                    }
+                    v3_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <a href="https://authoritywang.github.io/v3/">
+                    <span class="papertitle">V^3: Viewing Volumetric Videos on Mobiles via Streamable 2D Dynamic Gaussians</span>
+                  </a>
+                  <br>
+                  <strong>Penghao Wang</strong>,
+                  Zhirui Zhang,
+                  <a href="https://aoliao12138.github.io/">Liao Wang</a>,
+                  <a href="https://yaokxx.github.io/">Kaixin Yao</a>,
+                  Siyuan Xie,
+                  <a href="http://www.yu-jingyi.com/cv/">Jingyi Yu</a>,
+                  <a href="https://wuminye.github.io/">Minye Wu</a>,
+                  <a href="https://www.xu-lan.com/">Lan Xu</a>,
+                  <br>
+                  <em>SIGGRAPH Asia 2024 (ACM Transactions on Graphics)</em> 2024 &nbsp
+                  <br>
+                  <a href="https://authoritywang.github.io/v3/">project page</a>
+                  <p></p>
+                </td>
+              </tr>
+
               <tr onmouseout="hifi4g_stop()" onmouseover="hifi4g_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle;">
                   <div class="one">
-                    <img src='data/publications/hifi4g/HiFi4G.png' style="padding:20px;width:100%;vertical-align:middle;text-align:center">
+                    <img src='data/publications/hifi4g/HiFi4G.png'
+                      style="padding:20px;width:100%;vertical-align:middle;text-align:center">
                   </div>
                   <script type="text/javascript">
                     function hifi4g_start() {
@@ -120,7 +159,8 @@
               <tr onmouseout="nephele_stop()" onmouseover="nephele_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle">
                   <div class="one">
-                    <img src='data/publications/nephele/nephele.webp' style="padding:20px;width:100%;vertical-align:middle;text-align:center">
+                    <img src='data/publications/nephele/nephele.webp'
+                      style="padding:20px;width:100%;vertical-align:middle;text-align:center">
                   </div>
                   <script type="text/javascript">
                     function nephele_start() {
