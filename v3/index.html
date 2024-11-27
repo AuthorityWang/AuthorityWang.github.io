@@ -36,70 +36,130 @@
         </p>
         <div class="btn-group" role="group" aria-label="Top menu">
             <a class="btn btn-primary" href="https://arxiv.org/abs/2409.13648">Paper</a>
-            <a class="btn btn-primary"
-                href="https://www.youtube.com/watch?v=Z5La9AporRU&t=78s">Video</a>
-            <a class="btn btn-primary" href="https://github.com/AuthorityWang/2D_Grided_Gaussians">Code (Training)</a>
-            <a class="btn btn-primary" href="https://github.com/AuthorityWang/v3_sibr_viewer">Code (Viewer)</a>
-            <a class="btn btn-primary" href="https://github.com/AuthorityWang/v3_sibr_viewer">Code (IOS Viewer)</a>
+            <a class="btn btn-primary" href="https://www.youtube.com/watch?v=Z5La9AporRU&t=78s">Video</a>
+            <a class="btn btn-primary" href="https://github.com/AuthorityWang/VideoGS">Code (Training)</a>
+            <a class="btn btn-primary" href="https://github.com/AuthorityWang/VideoGS_SIBR_viewers">Code (SIBR Viewer)</a>
+            <a class="btn btn-primary" href="https://github.com/zhangzhr4/VideoGS_IOS_viewers">Code (IOS Viewer)</a>
         </div>
         <br>
-        <!-- full code will be release before October -->
-        Code will be released before October<br>
+        Code Released<br>
     </div>
 
     <div class="container">
         <div class="section">
-            <div class="vcontainer">
-                <iframe class='video' src="https://www.youtube.com/embed/Z5La9AporRU?si=V6Wq98KC4WcabpVY"  title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
             <hr>
-            <p>
-                Experiencing high-fidelity volumetric video as seamlessly as 2D videos is a long-held dream. However, current dynamic 3DGS methods, 
-                despite their high rendering quality, face challenges in streaming on mobile devices due to computational and bandwidth constraints.
-                In this paper, we introduce V^3(Viewing Volumetric Videos), a novel approach that enables high-quality mobile rendering through the streaming of dynamic Gaussians. 
-                Our key innovation is to view dynamic 3DGS as 2D videos, facilitating the use of hardware video codecs. 
-                Additionally, we propose a two-stage training strategy to reduce storage requirements with rapid training speed. 
-                The first stage employs hash encoding and shallow MLP to learn motion, then reduces the number of Gaussians through pruning to meet the streaming requirements, 
-                while the second stage fine tunes other Gaussian attributes using residual entropy loss and temporal loss to improve temporal continuity.
-                This strategy, which disentangles motion and appearance, maintains high rendering quality with compact storage requirements.
-                Meanwhile, we designed a multi-platform player to decode and render 2D Gaussian videos.
-                Extensive experiments demonstrate the effectiveness of V^3, outperforming other methods by enabling high-quality rendering and streaming on common devices, which is unseen before. 
-                As the first to stream dynamic Gaussians on mobile devices, our companion player offers users an unprecedented volumetric video experience, including smooth scrolling and instant sharing.
-            </p>
-            <div class="section">
-                <h2>Overview</h2>
-                <hr>
-                <div class="row align-items-center">
-                    <div class="col justify-content-center text-center">
-                        <img src="assets/method.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
-                    </div>
-                    <hr>
-                    <p>
-                        First, we divide the long sequences into groups for training.
-                        In the first stage, we use hash encoding following a shallow MLP
-                        with position as input to estimate the motion of the human subjects.
-                        In the second stage, we fine-tune the attributes of the wrapped Gaussians
-                        from stage 1 with residual entropy loss and temporal loss,
-                        which yields 2D Gaussian video with highly temporal consistency
-                        and thus can use video codec to perform efficient compression.
-                    </p>
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    <img src="assets/teaser.jpg" style="width:100%; margin-right:-10px; margin-top:-10px;">
                 </div>
+                <hr>
+                <h6 style="color: #828688; text-align: center; font-size: 18px;">
+                    We present V^3, a novel method that can stream 2D Gridded Gaussians to mobiles for high-quality rendering with low storage requirements, providing users with a unique volumetric video viewing experience across multiple devices.
+                </h6>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Overview Video</h2>
+            <div class="vcontainer">
+                <iframe class='video' src="https://www.youtube.com/embed/Z5La9AporRU?si=V6Wq98KC4WcabpVY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
             <hr>
         </div>
+        <div class="section">
+            <h2>Representation</h2>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    <img src="assets/representation.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+                </div>
+                <hr>
+                <p>
+                    We model dynamic 3DGS as a 2D video with multiple dimensions, where each frame corresponds to its specific 3DGS attributes. During the rendering, we extract Gaussian properties from each pixel to recover Gaussian Splat structural.
+                </p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Method</h2>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    <img src="assets/method.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+                </div>
+                <hr>
+                <p>
+                    First, we divide the long sequences into groups for training.
+                    In the first stage, we use hash encoding following a shallow MLP
+                    with position as input to estimate the motion of the human subjects.
+                    In the second stage, we fine-tune the attributes of the wrapped Gaussians
+                    from stage 1 with residual entropy loss and temporal loss,
+                    which yields 2D Gaussian video with highly temporal consistency
+                    and thus can use video codec to perform efficient compression.
+                </p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Comparison</h2>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    <img src="assets/comparison.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+                </div>
+                <hr>
+                <p>
+                    Qualitative Comparison against recent SOTA methods including VideoRF [Wang et al. 2024], 3DGStream [Sun et al. 2024], HumanRF [Işık et al. 2023],NeuS2 [Wang et al. 2023a]. Our method achieves high-quality rendering with clear details.
+                </p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Result Gallery</h2>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    <img src="assets/gallery.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+                </div>
+                <hr>
+                <p>
+                    Gallery of our results. Our method can achieve high-quality novel view synthesis in scenes with challenging motion and flexible topology changes. 
+                </p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Bibtex</h2>
+            <hr>
+            <div class="bibtexsection">
+                @article{wang2024v,
+                    title={V\^{} 3: Viewing Volumetric Videos on Mobiles via Streamable 2D Dynamic Gaussians},
+                    author={Wang, Penghao and Zhang, Zhirui and Wang, Liao and Yao, Kaixin and Xie, Siyuan and Yu, Jingyi and Wu, Minye and Xu, Lan},
+                    journal={ACM Transactions on Graphics (TOG)},
+                    volume={43},
+                    number={6},
+                    pages={1--13},
+                    year={2024},
+                    publisher={ACM New York, NY, USA}
+                  }
+            </div>
+        </div>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-            crossorigin="anonymous"></script>
-
+        <hr>
+        <footer>
+            <p>Sen feedback and questions to <a href="https://authoritywang.github.io/">Penghao Wang</a> and <a href="https://github.com/zhangzhr4">Zhirui Zhang</a>. Mail:
+                wangph1@shanghaitech.edu.cn, zhangzhr4@shanghaitech.edu.cn</p>
+        </footer>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
 
 </body>
 

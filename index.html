@@ -81,6 +81,7 @@
                 <td style="padding:20px;width:100%;vertical-align:middle">
                   <h2>News</h2>
                   <p>
+                    <li>2024.11 V^3 code is <a href="https://github.com/AuthorityWang/VideoGS">released</a></li>
                     <li>2024.09 V^3 is accepted to SIGGRAPH Asia 2024 (TOG) 😊</li>
                   </p>
                 </td>
@@ -94,8 +95,13 @@
               <tr onmouseout="v3_stop()" onmouseover="v3_start()"></tr>
               <td style="padding:20px;width:25%;vertical-align:middle;">
                 <div class="one">
-                  <img src='data/publications/v3/v3_teaser.jpg'
-                    style="padding:20px;width:100%;vertical-align:middle;text-align:center">
+                  <div class="two" id="v3_image">
+                    <video muted autoplay loop>
+                      <source src="data/publications/v3/v3_teaser.jpg" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <img src="data/publications/v3/v3_teaser.jpg">
                 </div>
                 <script type="text/javascript">
                   function v3_start() {
@@ -114,14 +120,14 @@
                     Gaussians</span>
                 </a>
                 <br>
-                <strong>Penghao Wang</strong>,
-                Zhirui Zhang,
-                <a href="https://aoliao12138.github.io/">Liao Wang</a>,
+                <strong>Penghao Wang*</strong>,
+                Zhirui Zhang*,
+                <a href="https://aoliao12138.github.io/">Liao Wang*</a>,
                 <a href="https://yaokxx.github.io/">Kaixin Yao</a>,
-                Siyuan Xie,
-                <a href="http://www.yu-jingyi.com/cv/">Jingyi Yu</a>,
-                <a href="https://wuminye.github.io/">Minye Wu</a>,
-                <a href="https://www.xu-lan.com/">Lan Xu</a>,
+                <a href="https://simonxie2004.github.io/">Siyuan Xie</a>,
+                <a href="http://www.yu-jingyi.com/cv/">Jingyi Yu†</a>,
+                <a href="https://wuminye.github.io/">Minye Wu†</a>,
+                <a href="https://www.xu-lan.com/">Lan Xu†</a>,
                 <br>
                 <em>SIGGRAPH Asia 2024 (ACM Transactions on Graphics)</em>&nbsp
                 <br>
@@ -131,6 +137,7 @@
                 /
                 <a href="https://arxiv.org/abs/2409.13648">arXiv</a>
                 /
+                <a href="https://github.com/AuthorityWang/VideoGS">code</a>
                 <p></p>
               </td>
       </tr>
@@ -138,8 +145,13 @@
       <tr onmouseout="hifi4g_stop()" onmouseover="hifi4g_start()">
         <td style="padding:20px;width:25%;vertical-align:middle;">
           <div class="one">
-            <img src='data/publications/hifi4g/HiFi4G.png'
-              style="padding:20px;width:100%;vertical-align:middle;text-align:center">
+            <div class="two" id="hifi4g_image">
+              <video muted autoplay loop>
+                <source src="data/publications/hifi4g/HiFi4G.png" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <img src="data/publications/hifi4g/HiFi4G.png">
           </div>
           <script type="text/javascript">
             function hifi4g_start() {
@@ -183,8 +195,13 @@
       <tr onmouseout="nephele_stop()" onmouseover="nephele_start()">
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
-            <img src='data/publications/nephele/nephele.webp'
-              style="padding:20px;width:100%;vertical-align:middle;text-align:center">
+            <div class="two" id="nephele_image">
+              <video muted autoplay loop>
+                <source src="data/publications/nephele/nephele.webp" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <img src="data/publications/nephele/nephele.webp">
           </div>
           <script type="text/javascript">
             function nephele_start() {
@@ -225,6 +242,17 @@
           <p></p>
         </td>
       </tr>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:0px">
+            <br>
+            <p style="text-align:center;font-size:small;">
+              Thanks <a href="https://jonbarron.info/">Jon Barron </a> for his <a href="https://github.com/jonbarron/jonbarron_website">website template</a>.
+            </p>
+          </td>
+        </tr>
+      </tbody></table>
 
       </td>
       </tr>
