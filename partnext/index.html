@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="PartNeXt">
+  <meta name="keywords" content="PartNeXt, PartNet, 3D, Part">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part Understanding</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">PartNeXt: A Next-Generation Dataset for Fine-Grained and
+              Hierarchical 3D Part Understanding</h1>
+            <div class="is-size-5 publication-authors">
+              <h3 class="title is-3 title"><a href="https://neurips.cc/">NeurIPS 2025 (<span>DB Track</span>)</a></h3>
+              <span class="author-block">
+                <a href="https://authoritywang.github.io/">Penghao Wang</a>,
+              </span>
+              <span class="author-block">
+                Yiyan He,
+              </span>
+              <span class="author-block">
+                Xin Lv,
+              </span>
+              <span class="author-block">
+                Yukai Zhou,
+              </span>
+              <span class="author-block">
+                <a href="http://www.yu-jingyi.com/cv/">Jingyi Yu</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.xu-lan.com/">Lan Xu</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://jiayuan-gu.github.io/">Jiayuan Gu</a><sup>†</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">ShanghaiTech University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://authoritywang.github.io/PartNeXt/static/assets/NeuripsDB25_PartNeXt_PenghaoWang.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://authoritywang.github.io/PartNeXt"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://authoritywang.github.io/PartNeXt"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- viewer Link. -->
+                <span class="link-block">
+                  <a href="https://authoritywang.github.io/PartNeXt"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Explore (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/AuWang/PartNeXt"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img id="teaser" src="./static/images/teaser.png" alt="Teaser">
+        <h2 class="subtitle has-text-centered">
+          We present PartNeXt, a next-generation dataset tailored for fine-grained, hierarchically structured 3D part
+          understanding.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Understanding objects at the level of their constituent parts is fundamental to advancing computer vision,
+              graphics, and robotics.
+              While datasets like PartNet have driven progress in 3D part understanding,
+              their reliance on untextured geometries and expert-dependent annotation limits scalability and usability.
+              We introduce PartNeXt,
+              a next-generation dataset addressing these gaps with over 23,000 high-quality, textured 3D models
+              annotated with fine-grained, hierarchical part labels across 50 categories.
+            </p>
+            <p>
+              We benchmark PartNeXt on two tasks:
+              (1) class-agnostic part segmentation,
+              where state-of-the-art methods (e.g., PartField, SAMPart3D) struggle with fine-grained and leaf-level
+              parts,
+              and (2) 3D part-centric question answering,
+              a new benchmark for 3D-LLMs that reveals significant gaps in open-vocabulary part grounding.
+              Additionally, training Point-SAM on PartNeXt yields substantial gains over PartNet,
+              underscoring the dataset's superior quality and diversity.
+              By combining scalable annotation, texture-aware labels, and multi-task evaluation,
+              PartNeXt opens new avenues for research in structured 3D understanding.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Annotation Platform. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Annotation Platform</h2>
+          <div class="content has-text-justified">
+            <img id="anno_sys" src="./static/images/dataset_anno_sys_design.png" alt="anno_sys">
+            <div class="content has-text-justified">
+              <p>
+                The example shows a microwave containing an internal tray.
+                The dual-panel layout allows annotators to first label external parts such as the “door”
+                (as shown in the right panel with already segmented meshes), and then proceed to annotate internal
+                components like the “tray” (visible in the unsegmented mesh in the left panel).
+                This design effectively mitigates occlusion issues during annotation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Annotation Platform. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- PartNeXt Dataset -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">PartNeXt Dataset</h2>
+          <div class="content has-text-justified">
+            <img id="gallery" src="./static/images/gallery.png" alt="gallery">
+            <div class="content has-text-justified">
+              <p>
+                Our constructed dataset, PartNeXt,
+                provides 350187 annotated instances for 23,519 objects across 50 categories.
+                Specifically, 14,811 instances were sourced from Objaverse, 2,633 from ABO, and 6,075 from 3DFuture.
+              </p>
+            </div>
+          </div>
+          <div class="content has-text-justified">
+            <img id="partnet_statistic" src="./static/images/dataset_statistic.png" alt="partnet_statistic">
+            <div class="content has-text-justified">
+              <p>
+                <b>PartNeXt Dataset Statistic.</b>
+                #S represent number of annotated objects, 
+                #P as the number of total annotated parts, 
+                P_<sub>Med</sub> is median number of parts, 
+                D_<sub>Med</sub> is median number of hierarchy depth, 
+                D_<sub>Max</sub> is maximum number of hierarchy depth.
+              </p>
+            </div>
+          </div>
+          <div class="content has-text-justified">
+            <img id="partnet_statistic" src="./static/images/supp_partnet_comp.png" alt="partnet_statistic">
+            <div class="content has-text-justified">
+              <p>
+                <b>Visualization of PartNet and PartNeXt results</b>
+                Since PartNet uses remeshing to obtain finer-grained parts, 
+                the mesh undergoes deformation, lacks texture, 
+                and requires manually drawn cutting lines after remeshing to achieve segmentation. 
+                As a result, the boundaries of the parts are often not smooth. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ PartNeXt Dataset -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- PartNeXt BenchMark -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">PartNeXt BenchMark</h2>
+
+          <h3 class="title is-4">Class-Agnostic 3D Part Instance Segmentation</h3>
+          <div class="content has-text-justified">
+            <img id="segmentation" src="./static/images/segmentation_qualitative.png" alt="segmentation">
+            <div class="content has-text-justified">
+              <p>
+                <b>Part Segmentation Results on PartNeXt.</b>
+                PartField struggles to separate connected regions, 
+                SAMesh excels at fine-grained segmentation but over-segments, 
+                while SAMPart3D lacks continuity in weak textures and granularity control.
+              </p>
+            </div>
+          </div>
+
+          <h3 class="title is-4">Part-Centric 3D Question Answering</h3>
+          <div class="content has-text-justified">
+            <img id="llm" src="./static/images/LLM.png" alt="llm">
+            <div class="content has-text-justified">
+              <p>
+                <b>Representative prompt-response pairs used to evaluate 3D part-level understanding.</b>
+                (a) Part Counting: the model is requested to enumerate the number of legs in a chair. 
+                (b) Part Classification: the model must name the part highlighted in red within the point-cloud bed. 
+                (c) Part Grounding: the model is asked to localize the “Shelf” 
+                of a bookcase by outputting the eight corner coordinates of its bounding box.
+              </p>
+            </div>
+          </div>
+          
+          <h3 class="title is-4">Analysis on 3D Promptable Segmentation</h3>
+          <div class="content has-text-justified">
+            <img id="pointsam" src="./static/images/pointsam.png" alt="pointsam">
+            <div class="content has-text-justified">
+              <p>
+                Comparison of Point-SAM models trained on different datasets. 
+                The metric IoU@k is reported for 3D promptable segmentation, 
+                where k denotes the number of prompt points.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ PartNeXt BenchMark -->
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <!-- <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre> -->
+      <pre><code>Coming soon</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="content">
+          <!-- <p>Page template from  <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a></p>
+        <p>Send question and feedback to <a href="https://authoritywang.github.io">Penghao Wang</a>. Mail: wangph1@shanghaitech.edu.cn</p> -->
+          <p>Page template from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a></p>
+          <p>Send question and feedback to <a href="https://authoritywang.github.io">Penghao Wang</a>. Mail:
+            wangph12025@shanghaitech.edu.cn</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
