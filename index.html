@@ -126,6 +126,43 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
+              <tr onmouseout="artllm_stop()" onmouseover="artllm_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle;">
+                  <div class="one">
+                    <div class="two" id="artllm_image">
+                      <video muted autoplay loop>
+                        <source src="data/publications/artllm/artllm_teaser_lowres.png" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <img src="data/publications/artllm/artllm_teaser_lowres.png">
+                  </div>
+                  <script type="text/javascript">
+                    function artllm_start() {
+                      document.getElementById('artllm_image').style.opacity = "1";
+                    }
+
+                    function artllm_stop() {
+                      document.getElementById('artllm_image').style.opacity = "0";
+                    }
+                    artllm_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">ArtLLM: Generating Articulated Assets via 3D LLM</span>
+                  <br>
+                  <strong>Penghao Wang</strong>,
+                  <a href="https://simonxie2004.github.io/">Siyuan Xie</a>,
+                  Hongyu Yan,
+                  <a href="https://wi-sc.github.io/xianghui-yang/">Xianghui Yang</a>,
+                  <a href="https://cs.stanford.edu/people/jingweih/">Jingwei Huang</a>,
+                  Chunchao Guo,
+                  <a href="https://jiayuan-gu.github.io/">Jiayuan Gu</a>,
+                  <br>
+                  <p></p>
+                </td>
+              </tr>
+
               <tr onmouseout="hy3domni_stop()" onmouseover="hy3domni_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle;">
                   <div class="one">
@@ -191,10 +228,10 @@
                   </script>
                 </td>
                 <td style="padding:20px;width:75%;vertical-align:middle">
-                  <!-- <a href="https://authoritywang.github.io/partnext/">
+                  <a href="https://authoritywang.github.io/partnext/">
                     <span class="papertitle">PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part Understanding</span>
-                  </a> -->
-                  <span class="papertitle">PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part Understanding</span>
+                  </a>
+                  <!-- <span class="papertitle">PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part Understanding</span> -->
                   <br>
                   <strong>Penghao Wang</strong>,
                   Yiyang He,
